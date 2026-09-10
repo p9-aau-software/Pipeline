@@ -1,0 +1,10 @@
+name: ml100k
+ingest: movielens
+params:
+  variant: ml-100k
+  # Implicit feedback: ratings at or above this count as positives, the rest are dropped.
+  min_rating: 4.0
+filter:
+  deduplicate: true
+  min_user_interactions: 5
+  min_item_interactions: 5

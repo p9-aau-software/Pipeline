@@ -1,0 +1,12 @@
+name: synthetic
+ingest: synthetic
+params:
+  n_users: 500
+  n_items: 200
+  n_topics: 8
+  interactions_per_user: 40
+  seed: 0
+filter:
+  deduplicate: true
+  min_user_interactions: 5
+  min_item_interactions: 5

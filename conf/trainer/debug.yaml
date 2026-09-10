@@ -1,0 +1,6 @@
+name: debug
+epochs: 2
+device: auto
+seed: 0
+log_every: 1
+checkpoint_every: 0

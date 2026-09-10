@@ -1,0 +1,28 @@
+defaults:
+  - data: synthetic
+  - model: popularity
+  - task: topk
+  - trainer: debug
+  - slurm: debug
+  - _self_
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  output_dir: outputs
+
+# Rebuild the dataset cache even if it already exists.
+force_prepare: false
+
+# Only used by `python -m recpipe.evaluate`.
+predictions: null
+
+# Only used by `python -m recpipe.export_split`.
+export_dir: null
+
+hydra:
+  run:
+    dir: ${paths.output_dir}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${model.name}-${data.name}
+  job:
+    # Keep the working directory at the project root so `data/raw` and friends resolve.
+    chdir: false

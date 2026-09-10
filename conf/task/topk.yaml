@@ -1,0 +1,12 @@
+# Implicit top-K ranking. Other task types (sequential, rating prediction) become
+# additional files in this group; nothing outside conf/task needs to change.
+name: topk
+split:
+  strategy: leave_one_out
+  drop_unseen: true
+  params:
+    min_interactions: 3
+eval:
+  ks: [5, 10, 20]
+  exclude_seen: true
+  batch_size: 1024
