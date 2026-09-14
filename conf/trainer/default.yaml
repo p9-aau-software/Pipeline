@@ -1,0 +1,6 @@
+name: default
+epochs: 30
+device: auto
+seed: 0
+log_every: 5
+checkpoint_every: 5

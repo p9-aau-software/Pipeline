@@ -1,0 +1,6 @@
+# For preparation and evaluation jobs that do not need a GPU.
+name: cpu
+gpus: 0
+cpus_per_task: 8
+mem: 16G
+time: "01:00:00"

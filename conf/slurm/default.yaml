@@ -1,0 +1,5 @@
+name: default
+gpus: 1
+cpus_per_task: 15
+mem: 24G
+time: "04:00:00"

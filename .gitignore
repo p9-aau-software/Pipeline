@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# run outputs and hydra logs
+outputs/
+multirun/
+logs/
+slurm-*.out
+
+# data: raw downloads and processed caches stay local
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# external repos vendored for level-2/3 adapters
+src/recpipe/models/external/*/
+!src/recpipe/models/external/README.md

@@ -1,0 +1,5 @@
+name: debug
+gpus: 1
+cpus_per_task: 8
+mem: 16G
+time: "00:30:00"
